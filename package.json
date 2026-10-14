@@ -1,0 +1,19 @@
+{
+  "name": "solana-program-byte-verifier",
+  "version": "0.1.0",
+  "description": "Verify local and deployed Solana program binaries byte-for-byte.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "bin": { "spbv": "./dist/src/cli.js" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "typescript": "^7.0.2"
+  }
+}
